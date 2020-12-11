@@ -15,8 +15,6 @@ public class Ex4 {
         Integer[] numbers = {3, 9, 5, 0, 13, 7, 11, 4, 8, 6};
 
         method4(numbers);
-
-        method4Version2(numbers);
     }
 
     // gets sum of elements of the array except first two elements
@@ -37,13 +35,5 @@ public class Ex4 {
     private static int[] convertIntegerArrToIntArr(Integer[] numbers) {
 
         return Stream.of(numbers).mapToInt(n -> n).toArray();
-    }
-
-    // shorter than method4
-    private static void method4Version2(Integer[] numbers) {
-        int[] ints = convertIntegerArrToIntArr(numbers);
-
-        int result = IntStream.of(ints).skip(2).sum();
-        System.out.println(result);
     }
 }
