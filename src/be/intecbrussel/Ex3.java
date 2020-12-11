@@ -16,7 +16,11 @@ public class Ex3 {
     }
 
     private static void method3(String[] greetings) {
-        String str = Stream.of(greetings).map(s -> s.toUpperCase()).limit(2).reduce("", (s, s2) -> s + s2);
+        String str = Stream.of(greetings)
+                    .limit(2)
+                    .map(s -> s.toUpperCase())
+                    .reduce("", (s, s2) -> s + s2 + " ");
+
         System.out.println(str);
     }
 }

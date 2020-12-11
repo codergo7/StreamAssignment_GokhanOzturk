@@ -17,20 +17,23 @@ public class Ex_5 {
     }
 
     private static void method5(String[] strNumbers) {
-        int[] numbers = Stream.of(strNumbers).mapToInt(value -> convertStringToInt(value)).toArray();
+        int[] numbers = Stream.of(strNumbers)
+                .filter(s -> s!=null)
+                .mapToInt(value -> convertStringToInt(value))
+                .toArray();
 
         Arrays.stream(numbers).forEach(n -> System.out.print(n + " "));
     }
 
     private static int convertStringToInt(String value) {
         int result = 0;
-       /* try {
+
+       try {
             result = Integer.parseInt(value);
         } catch (NumberFormatException nfe) {
             nfe.printStackTrace();
         }
 
-        */
-        return Integer.parseInt(value);
+        return result;
     }
 }
