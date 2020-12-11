@@ -17,9 +17,9 @@ public class Ex2 {
     }
 
     private static void method2(Integer[] numbers) {
-        Integer[] newList = Stream.of(numbers).map(n ->n/2 ).toArray(size->new Integer[size]);
+        Integer[] newList = Stream.of(numbers).map(n -> n / 2).toArray(size -> new Integer[size]);
 
-        Stream.of(newList).forEach(n-> System.out.print(n + " "));
+        Stream.of(newList).forEach(n -> System.out.print(n + " "));
         //System.out.println(Arrays.asList(newList));
     }
 }

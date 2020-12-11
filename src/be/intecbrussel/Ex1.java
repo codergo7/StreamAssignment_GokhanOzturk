@@ -2,7 +2,8 @@ package be.intecbrussel;
 
 import java.util.stream.Stream;
 
-/** Maak een stream die elke integer gaat vermenigvuldigen met 5 en die
+/**
+ * Maak een stream die elke integer gaat vermenigvuldigen met 5 en die
  * dan afprinten als de integer groter is dan 50
  */
 public class Ex1 {
@@ -15,8 +16,8 @@ public class Ex1 {
 
     private static void method1(Integer[] numbers) {
         Stream.of(numbers)
-                .map(integer -> integer *5)
-                .filter(integer -> integer>50)
-                .forEach(i-> System.out.print(i + " "));
+                .map(integer -> integer * 5)
+                .filter(integer -> integer > 50)
+                .forEach(i -> System.out.print(i + " "));
     }
 }
