@@ -24,11 +24,13 @@ public class Ex_5 {
 
     private static int convertStringToInt(String value) {
         int result = 0;
-        try {
+       /* try {
             result = Integer.parseInt(value);
         } catch (NumberFormatException nfe) {
             nfe.printStackTrace();
         }
-        return result;
+
+        */
+        return Integer.parseInt(value);
     }
 }
