@@ -22,13 +22,16 @@ public class Ex4 {
 
         int[] ints = convertIntegerArrToIntArr(numbers);
 
-        // reverses elements of the int[] array, then gets sum of elements of the array except last two elements
-        int result = Arrays.stream(IntStream
-                .rangeClosed(1, ints.length)
-                .map(i -> ints[ints.length - i])
-                .toArray())
-                .limit(ints.length - 2)
-                .sum();
+        // reverses elements of the int[] array,
+        int[] reversedArr= IntStream
+                           .rangeClosed(1, ints.length)
+                           .map(i -> ints[ints.length - i])
+                           .toArray();
+
+        // gets sum of elements of the array except last two elements
+        int result = Arrays.stream(reversedArr)
+                    .limit(ints.length - 2)
+                    .sum();
 
         System.out.println(result);
     }
